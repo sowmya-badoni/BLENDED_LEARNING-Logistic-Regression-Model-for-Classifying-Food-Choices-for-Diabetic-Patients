@@ -22,8 +22,8 @@ To implement a logistic regression model to classify food items for diabetic pat
 
 
 Program to implement Logistic Regression for classifying food choices based on nutritional information.
-Developed by: MOHAMMED SAAJID S
-RegisterNumber:  212223240093
+Developed by: sowmya badoni
+RegisterNumber:  212223230211
 
 ```py
 import pandas as pd
@@ -42,7 +42,7 @@ food_df = pd.read_csv(dataset_url)
 food_df.dtypes
 ```
 
-![alt text](image.png)
+![image](https://github.com/user-attachments/assets/50c114e1-fcd0-4f9f-9140-7a40acfd470a)
 
 ```py
 X_raw = food_df.iloc[:, :-1]
@@ -50,9 +50,8 @@ y_raw = food_df.iloc[:, -1:]
 scaler = MinMaxScaler()
 X = scaler.fit_transform(X_raw)
 print(f"The range of feature inputs are within {X.min()} to {X.max()}")
-```
+```![image](https://github.com/user-attachments/assets/eeeadbbd-2062-4578-8f7d-86360f5cfbbf)
 
-![alt text](image-1.png)
 
 ```py
 label_encoder = LabelEncoder()
@@ -62,7 +61,8 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, stratif
 print(f"Training dataset shape, X_train: {X_train.shape}, y_train: {y_train.shape}")
 print(f"Testing dataset shape, X_test: {X_test.shape}, y_test: {y_test.shape}")
 ```
-![alt text](image-2.png)
+![image](https://github.com/user-attachments/assets/faee2a1f-5555-4449-a65f-6eecee6fee26)
+
 
 ```py
 penalty= 'elasticnet'
@@ -74,7 +74,8 @@ en_model = LogisticRegression(random_state=2, penalty=penalty, multi_class=multi
 en_model.fit(X_train, y_train)
 ```
 
-![alt text](image-3.png)
+![image](https://github.com/user-attachments/assets/8ee7e44b-8270-482d-be1d-73ef754a6130)
+
 
 ```py
 def evaluate_metrics(y_true, y_pred):
@@ -107,7 +108,8 @@ print(en_metrics)
 
 ## Output:
 
-![alt text](image-4.png)
+![image](https://github.com/user-attachments/assets/2671f696-3d02-443e-b2ec-781d7adfbf76)
+
 
 
 ## Result:
